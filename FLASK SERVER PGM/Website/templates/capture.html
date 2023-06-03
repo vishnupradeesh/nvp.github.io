@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {{Capture}}
+        </title>
+        <link rel = "icon" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlP_5vhnLi-mHoN5bZSlDDaDL2bXThTdxKAg&usqp=CAU" type = "image/x-icon">
+        <link rel = "stylesheet" href = "{{url_for('static',filename = 'main.css')}}"/>
+    </head>
+<body>
+<div class = "root">
+    <br>
+    
+        <div class = "header"> 
+            <br>
+            <div class = "title">
+              <p>FRUIT RIPENING AND MONITORING USING COMPUTER <br> BASED INTELLIGENCE AND IoT</p>
+        </div>
+    </div>
+
+    <br><br>
+
+      <div class = take-button>
+        <form action = "{{url_for('capture')}}" method = "POST" enctype = "multipart/form-data">
+
+          <div id="my_camera"></div>
+          <div id="results"></div>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+          <script language="JavaScript">
+
+          // Configure a few settings and attach camera
+            Webcam.set({
+                width: 480,
+                height: 640,
+                image_format: 'jpeg',
+                jpeg_quality: 100
+            });
+            Webcam.attach( '#my_camera' );
+
+          </script>
+          <div class="USER_IMAGE">
+          {% if user_image %}
+          <img src= "{{ user_image }}" alt="Italian Trulli" width="640" height="480"> 
+          <div class="camera-data"><p>CLASS : <h>{{result}}</h>&emsp;AND&emsp;PERCENT :<h>{{prediction}}% </h></p></div>
+          {% else %}
+          <h1>Image Will be displayed here</h1>
+          {% endif %}</div>
+        <input type=submit value="Capture" id="CAPTURE">
+      </form>
+      </div>
+    
+</div><!--root-->
+</body>
+</html>

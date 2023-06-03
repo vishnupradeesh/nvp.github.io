@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {{title}}
+        </title>
+        <link rel = "icon" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKK98r19k7f-pqti1sV1GOlx5PdyoWd4YWEA9KpK2L1Tij2Yl0K9flYt7WOF4h6So1PWc&usqp=CAU" type = "image/x-icon">
+        <link rel = "stylesheet" href = "{{url_for('static',filename = 'main.css')}}"/>
+    </head>
+<body>
+<div class = "root">
+    <br>
+    
+        <div class = "header">
+            <div class = "nav-bar">
+            <nav>
+                <li><a href = home.html>HOME</a></li>
+                <li><a href = "About.html">ABOUT</a></li>
+                <li><a href = "Day.html">DAYS</a></li>
+                <li><a href = "report.html">REPORT</a></li>
+                <li><a href = "Test.html">TEST</a></li>
+                <li><a href = "Contact.html">CONTACT</a></li>
+            </nav> 
+        </div>   
+            <br>
+            <div class = "title">
+                <p>FRUIT RIPENING AND MONITORING USING COMPUTER <br> BASED INTELLIGENCE AND IoT</p>
+        </div>
+    </div>
+    <br><br>
+
+    <div class = "day-data">
+        <center><form action = "{{url_for('Day')}}" method = "POST" >
+            <input type = "email" name = "email" placeholder="                            E - M a i l  " required/><br>
+            <input type = "tel" maxlength="2" name = "no_of_days" placeholder="                             D a y s  " pattern="[0-9]{2}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required/>
+           <br> 
+           <div class="day-data-sub"><button id="day_sub" type = "submit"><p>SUBMIT</p></button></div>
+        </form></center>
+    </div>
+   <div id="day_data_shown"><h1><center>{{DATA}}</center></h1></div>
+</div><!--content end-->
+
+  
+
+
+</body>
+</html>

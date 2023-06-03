@@ -1,0 +1,134 @@
+<!--<!DOCTYPE HTML>
+<html>
+<head>
+<title>save image from a page</title>
+</head>
+<body>
+ <a style="display:none;" href="car.png" download>save Image in my folder     </a>
+<img src="car.png"/>
+ the name of the folder is : (saveImage) :  and it is in the same 
+place with my index.html
+<button>save Image in my folder</button>
+ <script src="jquery-1.11.3.min.js"></script>
+<script>
+$("button").click(function()
+{
+   $('a')[0].click();
+});
+</script>
+</body>
+</html>
+
+
+<style>
+    #my_camera{
+      width: 480px;
+      height: 640px;
+      border: 1px solid black;
+
+      }
+  </style>
+
+  <div id="my_camera"></div>
+    <input type=button value="Take Snapshot" onClick="take_snapshot()">
+  
+    <div id="results" ></div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+    <script language="JavaScript">
+
+// Configure a few settings and attach camera
+    Webcam.set({
+        width: 480,
+        height: 640,
+        image_format: 'jpeg',
+        jpeg_quality: 100
+    });
+    Webcam.attach( '#my_camera' );
+
+          var shutter = new Audio();
+          shutter.autoplay = true;
+          shutter.src = navigator.userAgent.match(/Firefox/) ? 'shutter.ogg' : 'shutter.mp3';
+
+function take_snapshot() {
+// play sound effect
+shutter.play();
+
+// take snapshot and get image data
+Webcam.snap( function(data_uri) {
+  // display results in page
+  document.getElementById('results').innerHTML =
+      '<img src="'+data_uri+'"/>';
+});
+}
+
+</script>
+
+<div id="my_camera"></div>
+<div class = take-button>
+<input type=button value="Capture" onClick="take_snapshot()">
+</div>
+<div id="results" ></div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+<script language="JavaScript">
+
+// Configure a few settings and attach camera
+   Webcam.set({
+       width: 480,
+       height: 640,
+       image_format: 'jpeg',
+       jpeg_quality: 100
+   });
+   Webcam.attach( '#my_camera' );
+
+
+  function take_snapshot() {
+      Webcam.snap( function(data_uri) {
+        document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
+      });
+  }
+</script>
+
+
+<form action = "{{url_for('capture')}}" method = "POST" enctype = "multipart/form-data"></form>
+<input type = "submit" id="SUB" /> </form> -->
+
+<!--<html>
+<body>
+   <h2> Create a text file and save it to a local computer using JavaScript. </h2>
+   <p> Enter the file content:- </p>
+   <textarea> </textarea>
+   <br/>
+   <button onclick = "downloadFile()"> save File </button>
+   <script>
+      const downloadFile = () => {
+         const link = document.createElement("a");
+         const content = document.querySelector("textarea").value;
+         const file = new Blob([content], { type: 'text/plain' });
+         link.href = URL.createObjectURL(file);
+         link.download = "sample.txt";
+         link.click();
+         URL.revokeObjectURL(link.href);
+      };
+   </script>
+</body>
+</html> -->
+
+<html>
+<header>
+  <div class=”row large”>
+     <div class=”imagegroup” style=”border:2px solid white”>
+       <img src=”https://picsum.photos/seed/1/1024/480″ alt=””>
+       <img src=”https://picsum.photos/seed/2/1024/480″ alt=””>
+     </div>
+  </div>
+  <div class=”row small”>
+    <div class=”imagegroup” style=”animation-delay: 1s;”>
+       <img src=”https://picsum.photos/seed/3/342/180″ alt=””>
+       <img src=”https://picsum.photos/seed/4/342/180″ alt=””>
+       <img src=”https://picsum.photos/seed/5/342/180″ alt=””>
+       <img src=”https://picsum.photos/seed/6/342/180″ alt=””>
+       <img src=”https://picsum.photos/seed/7/342/180″ alt=””>
+       <img src=”https://picsum.photos/seed/8/342/180″ alt=””>
+    </div>
+  </div>
+</header></html>

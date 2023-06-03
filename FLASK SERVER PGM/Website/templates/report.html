@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {{title}}
+        </title>
+        <link rel = "icon" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTec2mfJgNcL6bS7MCQUHyvJi68NWVj85RNQ4EezgQPbdCRBIiDDL6PgrMS9atxY9n-ZCQ&usqp=CAU" type = "image/x-icon">
+        <link rel = "stylesheet" href = "{{url_for('static',filename = 'main.css')}}"/>
+
+    </head>
+<body>
+<div class = root>
+    <br>
+    
+        <div class = "header">
+            <div class = "nav-bar">
+            <nav>
+                <li><a href = home.html>HOME</a></li>
+                <li><a href = "About.html">ABOUT</a></li>
+                <li><a href = "Day.html">DAYS</a></li>
+                <li><a href = "report.html">REPORT</a></li>
+                <li><a href = "Test.html">TEST</a></li>
+                <li><a href = "Contact.html">CONTACT</a></li>
+            </nav> 
+        </div>   
+            <br>
+            <div class = "title">
+                <p>FRUIT RIPENING AND MONITORING USING COMPUTER <br> BASED INTELLIGENCE AND IoT</p>
+        </div>
+    </div>
+    <div class = "content-table">
+        <form action = "{{url_for('Report')}}" method = "POST">
+        <div id = "email-input">
+        <input type = "email" name = "confirm_email" id = "email-link" placeholder = "     C o n f i r m  Y o u r  M a i l  -  I d "/>
+    </div>
+          <button class = "ACT" type = "submit">ACTIVATE</button>
+        </form>
+        <table>
+
+            <tr>
+              <th>EMAIL</th>
+              <th>PHONE NO.</th>
+              <th id = "banana_header">CLASS & PERCENTAGE</th>
+            </tr>
+            <tr>
+                <td>{{mailid}}</td>
+                <td>{{phoneno}}</td>
+                <td id = "banana_row">{{bananaclass}}</td>
+            </tr>            
+          </table><br>
+          <br>
+          <div class = "status_else"><center><h1>{{else_status}}</h1></center></div>
+    </div><!--content end-->
+    
+</div><!--root -->
+</body>
+</html>

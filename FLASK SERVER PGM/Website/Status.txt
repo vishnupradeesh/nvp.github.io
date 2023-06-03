@@ -1,0 +1,82 @@
+Delivered-To: finalyearpro833@gmail.com
+Received: by 2002:a05:6a11:fb27:b0:3e8:31ab:abbb with SMTP id id39csp1663238pxc;
+        Sun, 22 Jan 2023 07:24:54 -0800 (PST)
+X-Received: by 2002:a17:907:100c:b0:870:e329:5f3d with SMTP id ox12-20020a170907100c00b00870e3295f3dmr23325756ejb.19.1674401094222;
+        Sun, 22 Jan 2023 07:24:54 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1674401094; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wtlIbn+AxIoeyjWQ7J8Qxf7k6K0UGxAd+FkxYdgw+foYtUYhSbQm08XUy2sjuMeLgk
+         CIHGbEiHTRdI4uw98kqzSZyw0ULR3jSKgXB+q/Nj1FwKojpgebjSxvjYVADy6dbK0rVA
+         SNC8+bXxH/80zQi5wQv+GEgLPOna74APpI3XCFW0806yvpLzY3EDzI9ev1UUhjhqEtBd
+         SoTwNZnI853pE+iktmQyXhKJXMV8/Aeix3o9lUpmWZIxrwxHnZoSKCLHB0T2T7X3Sv0k
+         0JwqST+vtA2Ymdi9/xjUALg6OK0AKpEZ9uYW0czRxXhNplcG+iY9tvfiM40R1WYCK4Wc
+         naww==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-transfer-encoding:subject:to:from:date
+         :message-id:dkim-signature;
+        bh=mvZjMJ2X24pK3KkgPZAtYckr/tbOa+ryyldx6k1mpvQ=;
+        b=w0Fr2orFtmMAPziFqAmExKzXf168VsD0+T2CQK7P47h20zKTHdqhGMEJnKpY23zj2N
+         gazUkICsP4N7PuMBpwq/nfPw3gqOhGPRpsjTekv72D3fTerOAl9E78790SIFtrOn2xoO
+         sG+CNedFVyeKdzguaiabXyFpFtlFY4JqqlX55B4uP7xAtz3cjZrds1/chB3eN6Cp8cE+
+         VrFTvSf2vmwPFXZ4qj+vuqmjL+NBM1e7wn3CAqrDZI7+kYIeW2Jedf6xMMaYydc/gaHR
+         sDu76xEjqAg7XLcvXeA4J/Ut7OXQ0yuhtdvi6e44RiIY7uqwWuXLYNAf8TdFrIzQrUTR
+         tFtw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=d0sv6JgD;
+       spf=pass (google.com: domain of aeromadan2002@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=aeromadan2002@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <aeromadan2002@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id vj10-20020a170907d48a00b008718a18d081sor9359918ejc.107.2023.01.22.07.24.54
+        for <finalyearpro833@gmail.com>
+        (Google Transport Security);
+        Sun, 22 Jan 2023 07:24:54 -0800 (PST)
+Received-SPF: pass (google.com: domain of aeromadan2002@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=d0sv6JgD;
+       spf=pass (google.com: domain of aeromadan2002@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=aeromadan2002@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=mime-version:content-transfer-encoding:subject:to:from:date
+         :message-id:from:to:cc:subject:date:message-id:reply-to;
+        bh=mvZjMJ2X24pK3KkgPZAtYckr/tbOa+ryyldx6k1mpvQ=;
+        b=d0sv6JgD4tdoGIKXrX4ZZ1yM6w/msIdm1BdqLHpYNmz58ohagZ4Y3vH40qh8ULIW+J
+         3D7Q/ZmnuepRmY76e0lWafZQvahkdCl1uq0AC+DTnvHrk5tQNKglccbcfB01o/HLJzl8
+         xw8gQ20MKfUGWj44f5tk+zscf7P0XqdsB/x1uXouAIa1plLJzBU2oIvvM7K4zDsVZyry
+         IfyoX0FC9+/SvG0PWJjTre7XB7brOgDEbxoibAz7o41nVssvdUilCc0SaXLRKo5fMMYL
+         fUAB8ZxVnSGQhR7su2MvccA/ZPh88uUicLN0nQoJ40xL0ve9OOsyiGwgPEJZaNv6XJA0
+         TF0A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=mime-version:content-transfer-encoding:subject:to:from:date
+         :message-id:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=mvZjMJ2X24pK3KkgPZAtYckr/tbOa+ryyldx6k1mpvQ=;
+        b=3m8A6ph25RygJYXjYYvvVNnqSUm1ZtkZcGb7D4aM9PcG7+Q2EOelGB/HbQXoRqXBCw
+         279Ht7zbsZnynlnTM2EU2negOcGgrRhiYnwv7gChqPVENkvhUDbsmW2iUjfDVRZXWJ7A
+         kmyvIiKhFAl3gqIUv0lPNg4l6IiX11J4OGxxBbkIReXAVicYz6ERi9X6jMM83wTVOxd2
+         uBKHBD0jFKJnG/qJeeeTSALVV+KQc9325D4cx11t3i21/xj341GPZyp5OGP7YYIZllRL
+         j2/g2XrGwQAZ8msDBfHOkWfeW0lRy3qhU+eWeeZpHuVdVoxEdf0e92NVsqcjSUt/dOgb
+         XRzA==
+X-Gm-Message-State: AFqh2krw81rlODukhsiYjfBZMys3pRCoJWvfMJONL4yfZbtbCgWV8m/L
+	2V/4mQBib+wmNNMLkziSAtMXR+4KR3JOv9hIlrQ=
+X-Google-Smtp-Source: AMrXdXs3hV+RCMNp05ZDEUAu+gKAM9YO/wiB544PRIExRgQyihgmUtx8SefcwNKATBhRf6XlOs0nnw==
+X-Received: by 2002:a17:906:f20b:b0:78d:f455:30db with SMTP id gt11-20020a170906f20b00b0078df45530dbmr22599756ejb.3.1674401093547;
+        Sun, 22 Jan 2023 07:24:53 -0800 (PST)
+Return-Path: <aeromadan2002@gmail.com>
+Received: from [172.28.0.12] (112.115.204.35.bc.googleusercontent.com. [35.204.115.112])
+        by smtp.gmail.com with ESMTPSA id k14-20020a1709063fce00b00852e0bbed1dsm5758235ejj.17.2023.01.22.07.24.53
+        for <finalyearpro833@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 22 Jan 2023 07:24:53 -0800 (PST)
+Message-ID: <63cd5545.170a0220.cb811.e14a@mx.google.com>
+Date: Sun, 22 Jan 2023 07:24:53 -0800 (PST)
+From: aeromadan2002@gmail.com
+To: finalyearpro833@gmail.com
+Subject: === MODEL REPORT ===
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+FRESH  98%  nvp15a1@gmail.com  9944095225

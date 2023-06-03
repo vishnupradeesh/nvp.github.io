@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SIGN UP</title>
+        <link rel = "icon" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIQaMPQ1vM8Dk08IIgX-nk269S6tiuIV6lpQ&usqp=CAU" type = "image/x-icon">
+    </head>
+    <body>
+        
+        <link rel = "stylesheet" type = 'text/css' href = "{{url_for('static',filename = 'signupcss.css')}}">
+        <div class = 'register'>
+            {% if MAIL %}
+            <h2 id = "register_text">WELCOME {{MAIL}}</h2>
+            {% else %}
+            <h2 id = "register_text">REGISTER HERE !!</h2>
+            {% endif %}
+            <form action = "{{url_for('SignUp')}}" method = "POST" >
+                <input type = "text"  name = 'myname' placeholder="                   N a m e  " required/>
+                <input type = "email" name = "email" placeholder="                   E - M a i l  " required/>
+                
+                <input type = "tel" maxlength="10" name = "phoneno" placeholder="             P h o n e  N u m b e r  " pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required/>
+                
+
+
+                <button class = "submit" type = "submit"><p>SUBMIT</p></button>
+                
+               <a href = "home.html" class = "cancel">  HOME</a>
+            </form>
+        </div>
+    </body>
+</html>

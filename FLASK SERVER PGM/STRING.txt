@@ -1,0 +1,16 @@
+Return-Path: <finalyearpro833@gmail.com>
+Received: from [192.168.1.7] ([27.7.64.10])
+        by smtp.gmail.com with ESMTPSA id n9-20020a170902d2c900b00183c6784704sm19423317plc.291.2023.01.16.08.38.41
+        for <finalyearpro833@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 16 Jan 2023 08:38:42 -0800 (PST)
+Message-ID: <63c57d92.170a0220.d50aa.e667@mx.google.com>
+Date: Mon, 16 Jan 2023 08:38:42 -0800 (PST)
+From: finalyearpro833@gmail.com
+To: finalyearpro833@gmail.com
+Subject: REPORT
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+xzxzxz  muthukumaremail@gmail.com  541  iot001
